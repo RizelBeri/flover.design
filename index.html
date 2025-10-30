@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Flower Design</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1><a href="/"><img src="/img/logo.png" alt="Flower Design logo"></a></h1>
+
+
+    <!-- Навігація: семантично краще як ul/li -->
+    <nav aria-label="Головна навігація">
+      <ul>
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#constructor">Збери букет</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section (перша секція — селектор в CSS main > section:first-of-type спрацює) -->
+    <section aria-label="Головна пропозиція">
+      <div>
+        <h2>Букет із кущових троянд "Довгоочікуване щастя"</h2>
+        <p>Ніжний та витончений шик у букеті з троянд — гарний вибір для коханої людини</p>
+        <p>
+          <a href="#" class="btn-primary">В кошик</a>
+          <a href="#catalog" class="btn-secondary">В каталог</a>
+        </p>
+      </div>
+
+      <figure>
+        <img src="img/bg_web-no-background.png" alt="Букет із кущових троянд" />
+      </figure>
+    </section>
+
+    <!-- Categories (друга секція — селектор main > section:nth-of-type(2) спрацює) -->
+    <section aria-label="Категорії товарів">
+      <figure>
+        <img src="img/bouquets.jpg" alt="Букети" />
+        <figcaption><a href="#">Букети</a></figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/natural_flowers.jpg" alt="Живі квіти" />
+        <figcaption><a href="#">Живі квіти</a></figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/own_bouquet.png" alt="Свій букет" />
+        <figcaption><a href="#">Свій букет</a></figcaption>
+      </figure>
+    </section>
+
+    <!-- About Us -->
+    <section id="about">
+      <div class="about-text">
+        <h2>Про нас</h2>
+        <p>
+          Яких квітів тут лише немає! Садові, і польові, і кімнатні у глиняних горщиках.
+          Очі розбігаються від такого достатку.
+        </p>
+        <p>
+          Тут представлена і багата колекція кімнатних рослин: кактуси різної форми та величини, ніжні фіалки,
+          усипані квітами аспарагуси, фікуси.
+        </p>
+      </div>
+
+      <div class="about-image">
+        <figure>
+          <img src="img/women.png" alt="Команда Flower Design" />
+        </figure>
+
+        <div class="social-icons" aria-label="Соціальні мережі">
+          <a href="#" aria-label="Instagram"><img src="img/inst.png" alt="Instagram" /></a>
+          <a href="#" aria-label="Facebook"><img src="img/fb.png" alt="Facebook" /></a>
+          <a href="#" aria-label="Viber"><img src="img/viber.png" alt="Viber" /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section aria-label="Працюємо для вас">
+      <h2>Працюємо для вас</h2>
+
+      <div>
+        <article>
+          <figure>
+            <img src="img/constructor.png" alt="Конструктор букета" />
+          </figure>
+          <p>Конструктор унікального букета</p>
+        </article>
+
+        <article>
+          <figure>
+            <img src="img/delivery.png" alt="Доставка" />
+          </figure>
+          <p>Безкоштовна доставка по місту до 2-х годин</p>
+        </article>
+
+        <article>
+          <figure>
+            <img src="img/indoor.png" alt="Кімнатні рослини" />
+          </figure>
+          <p>Наявність кімнатних рослин</p>
+        </article>
+
+        <article>
+          <figure>
+            <img src="img/for_loved_ones.png" alt="Подарунки" />
+          </figure>
+          <p>Вибір квітів для коханих, мам та друзів</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog">
+      <h2>Каталог</h2>
+
+      <article>
+        <figure>
+          <img src="img/bouquet_cart11.png" alt="Ніжна свіжість: троянди та лілії" />
+          <figcaption>Ніжна свіжість: троянди та лілії</figcaption>
+        </figure>
+        <p class="price">445 грн</p>
+        <a href="#" class="btn-cart">В кошик</a>
+      </article>
+
+      <article>
+        <figure>
+          <img src="img/bouquet_cart21.png" alt="Сорбет: хризантеми та троянди" />
+          <figcaption>Сорбет: хризантеми та троянди</figcaption>
+        </figure>
+        <p class="price">450 грн</p>
+        <a href="#" class="btn-cart">В кошик</a>
+      </article>
+
+      <article>
+        <figure>
+          <img src="img/bouquet_cart31.png" alt="Yellow Song: соняшники та солідаго" />
+          <figcaption>Yellow Song: соняшники та солідаго</figcaption>
+        </figure>
+        <p class="price">455 грн</p>
+        <a href="#" class="btn-cart">В кошик</a>
+      </article>
+
+      <article>
+        <figure>
+          <img src="img/bouquet_cart41.png" alt="Персиковий нектар: лілії та троянди" />
+          <figcaption>Персиковий нектар: лілії та троянди</figcaption>
+        </figure>
+        <p class="price">455 грн</p>
+        <a href="#" class="btn-cart">В кошик</a>
+      </article>
+
+      <article>
+        <figure>
+          <img src="img/bouquet_cart51.png" alt="Аврора: лілії та троянди" />
+          <figcaption>Аврора: лілії та троянди</figcaption>
+        </figure>
+        <p class="price">460 грн</p>
+        <a href="#" class="btn-cart">В кошик</a>
+      </article>
+
+      <article>
+        <figure>
+          <img src="img/bouquet_cart61.png" alt="Класика кохання: червоні троянди" />
+          <figcaption>Класика кохання: червоні троянди</figcaption>
+        </figure>
+        <p class="price">465 грн</p>
+        <a href="#" class="btn-cart">В кошик</a>
+      </article>
+    </section>
+
+    <!-- Reviews -->
+    <section aria-label="Відгуки клієнтів">
+      <h2>Відгуки</h2>
+
+      <article>
+        <figure>
+          <img src="img/reviews-photo2.png" alt="Фото клієнта Володимира" />
+        </figure>
+
+        <blockquote>
+          <p>
+            "Сам не фахівець з квітів, але дружині дуже сподобався оригінальний весняний букет, зібраний із позитивним
+            настроєм. Залишаю свій позитивний відгук магазину на вул. Добровольчих батальонів."
+          </p>
+          <p>Володимир, <time datetime="2022-06-19">19.06.22</time></p>
+        </blockquote>
+      </article>
+
+      <article>
+        <figure>
+          <img src="img/reviews-photo1.png" alt="">
+        </figure>
+
+        <blockquote>
+          <p>
+           “Замовляла квіти у неробочий час (увечері), але зі мною дуже оперативно зв'язався співробітник та пообіцяв доставити букет вранці у призначений час. Так і сталося, квіти були доставлені з точністю секунда в секунду, свіжі та красиві. Рекомендую.”
+          </p>
+          <p>
+            Людмила, <time datetime="2022-06-19">03.04.22</time>
+          </p>
+        </blockquote>
+      </article>
+
+      <!-- Review Form (семантично коректніше: fieldset+legend) -->
+      <div>
+        <h3>Додати відгук:</h3>
+        <form class="review-form" action="#" method="post" novalidate>
+          <fieldset>
+            <legend class="visually-hidden">Форма для додавання відгуку</legend>
+
+            <label for="review-name" class="visually-hidden">Ваше ім'я</label>
+            <input id="review-name" name="name" type="text" placeholder="Ваше ім'я" required />
+
+            <label for="review-text" class="visually-hidden">Ваш відгук</label>
+            <textarea id="review-text" name="review" placeholder="Ваш відгук:" required></textarea>
+
+            <button type="submit">Відправити</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <!-- Delivery Section (перенесена всередину <main>) -->
+    <section aria-label="Доставка і оплата">
+      <h2>Доставка і оплата</h2>
+
+      <div>
+        <article>
+          <div class="step-number">1</div>
+          <p>Ви замовляєте букет через каталог</p>
+        </article>
+
+        <article>
+          <div class="step-number">2</div>
+          <p>Ви оплачуєте товар через картку VISA або МС, або Приват24</p>
+        </article>
+
+        <article>
+          <div class="step-number">3</div>
+          <p>Вам передзвонять наші менеджери, якщо потрібно щось уточнити</p>
+        </article>
+
+        <article>
+          <div class="step-number">4</div>
+          <p>Надсилаємо фото зібраного букета, щоб узгодити все</p>
+        </article>
+
+        <article>
+          <div class="step-number">5</div>
+          <p>Доставляємо букет одержувачу протягом 2-х годин</p>
+        </article>
+
+        <article>
+          <div class="step-number">6</div>
+          <p>Сповіщаємо вас про успішну доставку букета</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacts">
+  <section class="footer-content">
+    
+    <address class="footer-column">
+      <h3>Контакти</h3>
+      <p><a href="tel:+380950000000">(095) 000 00 00</a></p>
+      <p><a href="tel:+380970000000">(097) 000 00 00</a></p>
+      <p>Ми працюємо цілодобово</p>
+    </address>
+
+    <nav class="footer-column" aria-label="Інформація">
+      <h3>Інформація</h3>
+      <ul>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#">Хіт продажу</a></li>
+        <li><a href="#">Відгуки</a></li>
+        <li><a href="#">Доставка і оплата</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-column" aria-label="Каталог">
+      <h3>Каталог</h3>
+      <ul>
+        <li><a href="#constructor">Збери свій букет</a></li>
+        <li><a href="#">Живі квіти</a></li>
+        <li><a href="#">Кімнатні рослини</a></li>
+
+      </ul>
+    </nav>
+
+    <section class="footer-column footer-subscribe" aria-label="Підписка та соцмережі">
+      <form>
+        <label for="subscribe-email" class="visually-hidden">Підписка на новини</label>
+        <input id="subscribe-email" type="email" placeholder="Введіть свій e-mail" required>
+        <button type="submit">Підписатися</button>
+      </form>
+
+      <ul class="footer-social">
+        <li><a href="#" aria-label="Instagram"><img src="img/inst.png" alt="Instagram"></a></li>
+        <li><a href="#" aria-label="Facebook"><img src="img/fb.png" alt="Facebook"></a></li>
+        <li><a href="#" aria-label="Viber"><img src="img/viber.png" alt="Viber"></a></li>
+      </ul>
+
+      <p class="copyright">© 2022 Flower Design</p>
+    </section>
+
+  </section>
+
+  <section class="footer-logo">
+    <img src="img/logo_color.png" alt="">
+    <h2>Flower Design</h2>
+  </section>
+</footer>
+
+</body>
+
+</html>

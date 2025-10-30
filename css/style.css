@@ -1,0 +1,897 @@
+/* 
+   BASE STYLES
+*/
+@font-face {
+  font-family: "Source Sans";
+  src: url("fonts/SourceSans3-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Source Sans";
+  src: url("fonts/SourceSans3-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Source Sans", sans-serif;
+  color: #351F21;
+  background: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility class for hiding labels visually but keeping them for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* 
+   HEADER
+*/
+header {
+  background: linear-gradient(135deg, #A9BFE4, #989EC3);
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+header h1 img {
+  max-height: 50px;
+  width: auto;
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header nav a:hover {
+  opacity: 0.8;
+}
+
+/* 
+   HERO SECTION
+*/
+main > section:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 80px 60px;
+
+}
+
+main > section:first-of-type > div {
+  padding-right: 20px;
+}
+
+main > section:first-of-type h2 {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #351F21;
+}
+
+main > section:first-of-type > div > p {
+  color: #351F21;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+main > section:first-of-type figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main > section:first-of-type figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  position: left;
+}
+
+main > section:first-of-type a {
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+main > section:first-of-type a.btn-primary {
+  background: #FFC2C7;
+  color: #fff;
+}
+
+main > section:first-of-type a.btn-primary:hover {
+  background: #FFC2C7;
+}
+
+main > section:first-of-type a.btn-secondary {
+  border: 2px solid #FFC2C7;
+  color: #FFC2C7;
+}
+
+main > section:first-of-type a.btn-secondary:hover {
+  background: #FFC2C7;
+  color: #fff;
+}
+
+/* 
+   CATEGORIES
+*/
+main > section:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 80px 60px;
+  background: #fff;
+}
+
+main > section:nth-of-type(2) figure {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  aspect-ratio: 4/3;
+}
+
+main > section:nth-of-type(2) figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main > section:nth-of-type(2) figure:hover {
+  transform: translateY(-5px);
+}
+
+main > section:nth-of-type(2) figcaption {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(168, 197, 221, 0.9);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ABOUT */
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 80px 60px 40px 60px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  width: 45%;
+  height: 150%;
+  background-image: url('../img/abstract_background.png');
+  background-size: 100% 100%;
+  background-position: center;
+  top: 5%;
+  right: -5%;
+  z-index: 0;
+  opacity: 1;
+  pointer-events: none;
+}
+
+#about .about-text {
+  z-index: 1;
+  position: relative;
+}
+
+#about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#about p {
+  color: #351F21;
+  margin-bottom: 15px;
+}
+
+#about .about-image {
+  position: relative;
+  margin-bottom: -50px;
+  z-index: 1;
+}
+
+#about figure {
+  position: relative;
+}
+
+#about .social-icons {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 3;
+}
+
+#about .social-icons a {
+  width: 50px;
+  height: 50px;
+  background: rgba(168, 197, 221, 0.8);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about .social-icons a:hover {
+  background: rgba(168, 197, 221, 1);
+  transform: scale(1.1);
+}
+
+#about .social-icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* SERVICES SECTION (Працюємо для вас) */
+section[aria-label="Працюємо для вас"] {
+  background: rgba(169, 191, 228, 0.5);
+  padding: 80px 60px 80px 60px;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  margin-top: 0;
+}
+
+section[aria-label="Працюємо для вас"] h2 {
+  font-size: 32px;
+  color: #A9BFE4;
+  margin-bottom: 60px;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+section[aria-label="Працюємо для вас"] > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+section[aria-label="Працюємо для вас"] article {
+  text-align: center;
+  flex: 0 1 auto;
+}
+
+section[aria-label="Працюємо для вас"] figure {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+section[aria-label="Працюємо для вас"] img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+section[aria-label="Працюємо для вас"] p {
+  font-size: 13px;
+  color: #989EC3;
+  line-height: 1.6;
+  max-width: 180px;
+  margin: 0 auto;
+}
+
+/* 
+   CATALOG
+*/
+#catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 80px 60px;
+  background: #ffffff;
+}
+
+#catalog h2 {
+  grid-column: 1 / -1;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+#catalog article {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  padding-bottom: 20px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+#catalog article:hover {
+  transform: translateY(-5px);
+}
+
+#catalog figure {
+  margin-bottom: 15px;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+#catalog figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#catalog figcaption {
+  margin: 10px 15px;
+  font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#catalog .price {
+  font-weight: 600;
+  color: #351F21;
+  margin: 10px 0 15px 0;
+}
+
+#catalog a.btn-cart {
+  display: inline-block;
+  padding: 10px 30px;
+  border: 2px solid #A9BFE4;
+  border-radius: 25px;
+  color: #A9BFE4;
+  font-size: 14px;
+}
+
+#catalog a.btn-cart:hover {
+  background: #A9BFE4;
+  color: #fff;
+}
+
+/* 
+   REVIEWS
+*/
+section[aria-label="Відгуки клієнтів"] {
+  padding: 80px 60px;
+  background: linear-gradient(to bottom, #fff, #f5f8fb);
+}
+
+section[aria-label="Відгуки клієнтів"] h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+section[aria-label="Відгуки клієнтів"] > article {
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  align-items: flex-start;
+}
+
+section[aria-label="Відгуки клієнтів"] > article figure {
+  flex-shrink: 0;
+}
+
+section[aria-label="Відгуки клієнтів"] img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+section[aria-label="Відгуки клієнтів"] blockquote {
+  flex: 1;
+}
+
+section[aria-label="Відгуки клієнтів"] blockquote p {
+  font-style: italic;
+  color: #351F21;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+section[aria-label="Відгуки клієнтів"] blockquote footer {
+  color: #A9BFE4;
+  font-size: 14px;
+}
+
+/* Review Form */
+section[aria-label="Відгуки клієнтів"] > div {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+section[aria-label="Відгуки клієнтів"] h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.review-form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.review-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  border-radius: 15px;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: #A9BFE4;
+}
+
+.review-form button {
+  align-self: flex-start;
+  padding: 12px 35px;
+  background: #FFC2C7;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.review-form button:hover {
+  background: #FFC2C7;
+}
+
+/* 
+   DELIVERY
+*/
+section[aria-label="Доставка і оплата"] {
+  padding: 80px 60px;
+  text-align: center;
+  background: #fff;
+}
+
+section[aria-label="Доставка і оплата"] h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+section[aria-label="Доставка і оплата"] > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step-number {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFC2C7, #f5d5db);
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+section[aria-label="Доставка і оплата"] article p {
+  font-size: 14px;
+  color: #351F21;
+  line-height: 1.6;
+}
+
+/* 
+   FOOTER
+*/
+footer {
+  background: linear-gradient(135deg, #A9BFE4, #989EC3);
+  color: #fff;
+  padding: 60px 60px 30px;
+  position: relative;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.footer-logo h2 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.footer-logo img {
+  size: 0.6;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+/* Subscribe */
+.footer-subscribe form {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.footer-subscribe input,
+.footer-subscribe button {
+  border: none;
+  font-size: 14px;
+}
+
+.footer-subscribe input {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 25px 0 0 25px;
+  background: rgba(255, 255, 255, 0.95);
+  outline: none;
+}
+
+.footer-subscribe button {
+  padding: 12px 25px;
+  border-radius: 0 25px 25px 0;
+  background: #FFC2C7;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.footer-subscribe button:hover {
+  background: #FFC2C7;
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.footer-social a {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.3s;
+}
+
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 10px;
+}
+
+/* RESPONSIVE*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main > section:first-of-type {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  main > section:first-of-type > div {
+    padding-right: 0;
+  }
+
+  #about {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  #about::before {
+    display: none;
+  }
+
+  #about .social-icons {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  main > section:nth-of-type(2),
+  #catalog {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  section[aria-label="Працюємо для вас"] > div {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  section[aria-label="Доставка і оплата"] > div {
+    grid-template-columns: 1fr;
+  }
+
+  section[aria-label="Відгуки клієнтів"] > article {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 100px;
+  }
+
+  .footer-logo {
+    top: 20px;
+  }
+
+  .footer-logo h2 {
+    font-size: 24px;
+  }
+
+  .footer-subscribe form {
+    flex-direction: column;
+  }
+
+  .footer-subscribe input {
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+
+  .footer-subscribe button {
+    border-radius: 25px;
+  }
+}
+
+
+/* ===========================
+   FIX: Footer logo & social icons (horizontal layout)
+=========================== */
+.footer-logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.footer-logo img {
+  max-height: 60px;
+  width: auto;
+}
+
+.footer-logo h2 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.3s;
+}
+
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.footer-social img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    max-height: 40px;
+  }
+  .footer-logo h2 {
+    font-size: 16px;
+  }
+  .footer-social {
+    gap: 10px;
+  }
+  .footer-social a {
+    width: 30px;
+    height: 30px;
+  }
+  .footer-social img {
+    width: 16px;
+    height: 16px;
+  }
+}
