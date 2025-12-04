@@ -3,13 +3,13 @@
 */
 @font-face {
   font-family: "Source Sans";
-  src: url("fonts/SourceSans3-Regular.ttf");
+  src: url("../fonts/SourceSans3-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Source Sans";
-  src: url("fonts/SourceSans3-SemiBold.ttf");
+  src: url("../fonts/SourceSans3-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
 }
@@ -723,7 +723,7 @@ footer {
   margin-top: 10px;
 }
 
-/* RESPONSIVE*/
+/* cRESPONSIVE*/
 @media (max-width: 768px) {
   header {
     flex-direction: column;
